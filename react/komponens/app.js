@@ -7,7 +7,9 @@ function App() {
             className: "border" // A "div" HTML elemhez egy "border" osztály van hozzárendelve.
         },
         "Doboz", 
-        React.createElement(BoxComponent)// Itt hívjuk meg a BoxComponent komponenst, amely egy piros dobozt jelenít meg.
+        React.createElement(BoxComponent),// Itt hívjuk meg a BoxComponent komponenst, amely egy piros dobozt jelenít meg.
+        React.createElement(BoxComponent),//itt adtuk hozzá a másik két dobozt +1
+        React.createElement(BoxComponent)//+2
     );
 }
 
