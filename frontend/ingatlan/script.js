@@ -37,7 +37,7 @@ const properties = [
     { 
         title: "Új építésű társasház", 
         description: "Egy modern lakóparkban található, kényelmes 3 szobás lakás parkolóval és játszótérrel.", 
-        price: 62000000, 
+        price: 63000000, 
         location: "Győr",
         image: "gyor.jpg"
     },
