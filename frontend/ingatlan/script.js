@@ -37,7 +37,7 @@ const properties = [
     { 
         title: "Új építésű társasház", 
         description: "Egy modern lakóparkban található, kényelmes 3 szobás lakás parkolóval és játszótérrel.", 
-        price: 63000000, 
+        price: 62000000, 
         location: "Győr",
         image: "gyor.jpg"
     },
@@ -85,22 +85,19 @@ const properties = [
     }
 ];
 
-// Változókat definiálunk
 const propertyContainer = document.querySelector(".properties");
 const modal = document.getElementById("inquiry-modal");
 const inquiryForm = document.getElementById("inquiry-form");
 const closeModalButton = document.getElementById("close-modal-button");
 const propertyForm = document.getElementById("property-form");
 
-// Ingatlanok listázása
 function displayProperties() {
-    propertyContainer.innerHTML = ""; // Az összes korábbi ingatlant töröljük
+    propertyContainer.innerHTML = ""; 
     properties.forEach((property, index) => {
         const propertyDiv = document.createElement("div");
         propertyDiv.classList.add("property");
 
-        // Ellenőrizzük, hogy létezik a kép URL, és betöltjük a képet
-        const imageSrc = property.image ? property.image : 'default-image.jpg'; // Ha nincs kép, akkor egy alapértelmezett kép kerül betöltésre.
+        const imageSrc = property.image ? property.image : 'default-image.jpg'; 
 
         propertyDiv.innerHTML = `
             <img src="${imageSrc}" alt="${property.title}" class="property-image" />
@@ -116,7 +113,6 @@ function displayProperties() {
 
 displayProperties();
 
-// Új hirdetés hozzáadása
 propertyForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -125,23 +121,19 @@ propertyForm.addEventListener("submit", (e) => {
     const price = document.getElementById("price").value;
     const location = document.getElementById("location").value;
 
-    // Ellenőrizd, hogy minden mezőt kitöltöttek-e
     if (title && description && price && location) {
         const newProperty = {
             title: title,
             description: description,
             price: parseInt(price),
             location: location,
-            image: 'default-image.jpg' // Alapértelmezett kép, ha nincs megadva
+            image: 'default-image.jpg' 
         };
 
-        // Hozzáadás a properties tömbhöz
         properties.push(newProperty);
 
-        // Frissítjük az ingatlanok listáját
         displayProperties();
 
-        // űrlap tisztítása
         propertyForm.reset();
         alert("Új hirdetés sikeresen felvéve!");
     } else {
@@ -149,18 +141,15 @@ propertyForm.addEventListener("submit", (e) => {
     }
 });
 
-// Modális ablak megjelenítése
 function openInquiryModal(index) {
     window.currentPropertyIndex = index;
     modal.style.display = "block";
 }
 
-// Modális ablak bezárása
 closeModalButton.addEventListener("click", () => {
     modal.style.display = "none";
 });
 
-// Adatküldés az e-mail címre
 inquiryForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -181,9 +170,9 @@ inquiryForm.addEventListener("submit", (e) => {
         `);
         const mailto = `mailto:rozlev404@hengersor.hu?subject=${subject}&body=${body}`;
         
-        window.location.href = mailto;  // E-mail küldés
+        window.location.href = mailto;  
 
-        modal.style.display = "none"; // A modal bezárása az adatküldés után
+        modal.style.display = "none"; 
     } else {
         alert("Kérlek töltsd ki az összes mezőt!");
     }

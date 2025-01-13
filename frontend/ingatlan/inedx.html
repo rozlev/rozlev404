@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Ingatlan kereskedés</title>
-</head> 
+    <title>Ingatlan</title>
+</head>
 <body> 
 <header>
     <h1>Ingatlan Hirdetések</h1>
@@ -15,7 +15,6 @@
     <section id="property-list">
         <h2>Elérhető Ingatlanok</h2>
         <div class="properties">
-            <!-- Dinamikusan generált ingatlanok -->
         </div>
     </section>
 
@@ -34,31 +33,32 @@
             <label for="location">Helyszín:</label>
             <input type="text" id="location" name="location" required>
 
+            <label for="image">Kép:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
             <button type="submit">Hirdetés Felvitele</button>
         </form>
     </section>
-
-    <!-- Modális ablak -->
-    <div id="inquiry-modal" class="modal">
-        <div class="modal-content">
-            <span id="close-modal-button" class="close">&times;</span>
-            <h2>Érdeklődés</h2>
-            <form id="inquiry-form">
-                <label for="inquiry-name">Név:</label>
-                <input type="text" id="inquiry-name" name="name" required>
-    
-                <label for="inquiry-address">Cím:</label>
-                <input type="text" id="inquiry-address" name="address" required>
-    
-                <label for="inquiry-phone">Telefonszám:</label>
-                <input type="text" id="inquiry-phone" name="phone" required>
-    
-                <button type="submit">Küldés</button>
-            </form>
-        </div>
-    </div>
-    
 </main>
+
+<div id="inquiry-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal-button" class="close-button">&times;</span>
+        <h3>Érdeklődés</h3>
+        <form id="inquiry-form">
+            <label for="inquiry-name">Név:</label>
+            <input type="text" id="inquiry-name" name="name" required>
+
+            <label for="inquiry-address">Cím:</label>
+            <input type="text" id="inquiry-address" name="address" required>
+
+            <label for="inquiry-phone">Telefonszám:</label>
+            <input type="tel" id="inquiry-phone" name="phone" pattern="[0-9]{10}" title="Telefonszámnak 10 számjegyűnek kell lennie" required>
+
+            <button type="submit">Érdeklődés Küldése</button>
+        </form>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
