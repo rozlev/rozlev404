@@ -17,10 +17,9 @@ body {
     flex-direction: column;
 }
 
-/* Fejléc */
 header {
-    background-color: #b30000; /* Mély piros háttér */
-    color: white; /* Fehér szöveg */
+    background-color: #b30000; 
+    color: white; 
     padding: 20px 0;
     text-align: center;
     font-size: 2rem;
@@ -28,7 +27,6 @@ header {
     text-transform: uppercase;
 }
 
-/* Fő tartalom */
 main {
     flex: 1;
     padding: 20px;
@@ -36,18 +34,17 @@ main {
     margin: 0 auto;
 }
 
-/* Ingatlanok listázása */
 .properties {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Mindig négy oszlop */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     margin-top: 20px;
     width: 100%;
 }
 
 .property {
-    background-color: white; /* Fehér kártya */
-    border: 2px solid #b30000; /* Piros szegély */
+    background-color: white; 
+    border: 2px solid #b30000; 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -70,8 +67,8 @@ main {
     margin: 0;
     padding: 15px;
     font-size: 1.5rem;
-    color: #b90101; /* Piros cím */
-    background-color: #fff5f5; /* Halvány piros háttér */
+    color: #b90101; 
+    background-color: #fff5f5; 
     text-align: center;
 }
 
@@ -79,7 +76,7 @@ main {
     padding: 15px;
     margin: 0;
     color: #800000;
-    background-color: #fffafa; /* Világos piros árnyalat */
+    background-color: #fffafa;
 }
 
 .property button {
@@ -97,7 +94,6 @@ main {
     background-color: #990000;
 }
 
-/* Űrlapok */
 form {
     background: white;
     padding: 20px;
