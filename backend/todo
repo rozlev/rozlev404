@@ -1,0 +1,4 @@
+package.json létrtehozása: npm init -y
+npm install express body-parser  nodemon cors mysql
+index.js létrehozása: node index.js beálítása a package.json-ban
+index.js beálítása, server létrehozása
