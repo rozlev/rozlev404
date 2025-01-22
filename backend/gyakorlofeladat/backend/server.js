@@ -14,3 +14,7 @@ const db=mysql.createConnection(
         database:"kozutak",
     }
 );
+
+app.get("/",(req, res) =>{
+    res.send("Fut a backend")
+})
