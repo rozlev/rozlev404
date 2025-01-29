@@ -26,7 +26,19 @@ app.get("/regiok",(req, res) => {
         return res.json(result)
     })
 })
+
+app.post("/ujregio", (req, res) => {
+    const { Rid, regionev, regio_tipusa } = req.body;
+    const sql = "INSERT INTO `regiok` (`Rid`, `regionev`, `regio_tipusa`) VALUES (?, ?, ?)";
+    const VALUES = ['11', 'Budapest', 'Főváros'];
  
+    db.query(sql, VALUES, (err, result) => {
+        if (err) return res.json(err);
+        return res.json({ message: "Sikeres beszúrás", result });
+    });
+});
+
+
 app.listen(3001, () => {
     console.log("Server is runningg on port 3001");
 });
