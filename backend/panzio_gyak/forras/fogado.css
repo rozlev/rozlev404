@@ -1,0 +1,54 @@
+body{
+  color: #293647;
+}
+
+.bg-fej {
+  background-position: center;
+  height: 400px;
+
+}
+
+.bg-fej h1{
+  color: black;
+  font-size: 250%;
+  text-transform: uppercase;
+  text-decoration: underline overline;
+  font-weight: bold;
+}
+.bg-fej h3{
+  color: black;
+  text-transform: uppercase;
+  text-decoration: underline overline;
+  font-weight: bold;
+}
+
+.container{
+  margin-bottom: 25px;
+}
+
+.bg-torzs {
+  align-content: center;
+}
+
+h3{
+  margin: 25px 0px;
+}
+
+a {
+  font-style: italic;
+  font-weight: bold;
+  color: darkblue;
+}
+
+#szel, #mag{
+  margin: 0px auto 15px;
+}
+
+#kalkGomb {
+  margin: 20px auto;
+}
+
+#valasz{
+  visibility:hidden;
+}
+

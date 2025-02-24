@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const mysql = require("mysql");
 const bodyParser = require("body-parser");
-app .use(bodyParser.json());
+app.use(bodyParser.json());
  
 const db = mysql.createConnection(
     {       
@@ -18,7 +18,7 @@ const db = mysql.createConnection(
 app.get("/", (req, res) => {
     res.send("Fut a backend!");
 })
- 
+
 app.get("/regiok",(req, res) => {
     const sql = "SELECT * FROM `regiok`";
     db.query(sql, (err, result) => {
